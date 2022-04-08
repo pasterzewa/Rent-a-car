@@ -1,0 +1,22 @@
+﻿@page
+@model RegisterConfirmationModel
+@{
+    ViewData["Title"] = "Register confirmation";
+}
+
+<h2>@ViewData["Title"]</h2>
+@{
+    if (@Model.DisplayConfirmAccountLink)
+    {
+<p>
+    Email został wysłany, sprawdź swój folder "spam". Jeśli przesłany link nie działa kliknij
+    <a id="confirm-link" href="@Model.EmailConfirmationUrl">tutaj</a>.
+</p>
+    }
+    else
+    {
+<p>
+        Please check your email to confirm your account.
+</p>
+    }
+}
